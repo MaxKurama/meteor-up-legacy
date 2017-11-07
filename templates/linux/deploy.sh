@@ -101,11 +101,11 @@ fi
 
 if [ -f package.json ]; then
   # support for 0.9
-  sudo npm install
+  sudo npm install --unsafe-perm
 else
   # support for older versions
-  sudo npm install fibers
-  sudo npm install bcrypt
+  sudo npm install fibers --unsafe-perm
+  sudo npm install bcrypt --unsafe-perm
 fi
 
 cd /opt/<%= appName %>/
